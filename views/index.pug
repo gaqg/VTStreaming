@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container-fluid
+			.navbar-header
+				button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='index.html') Logo
+			#myNavbar.collapse.navbar-collapse
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href='Peliculas.html') Peliculas
+					li
+						a(href='Series.html') Series
+					li
+						a(href='Musica.html') Musica
+					li
+						a(href='https://www.google.com.mx/') Internet
+					li
+						a(href='#')
+							span.glyphicon.glyphicon-search
+
