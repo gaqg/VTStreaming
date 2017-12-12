@@ -1,0 +1,25 @@
+extends ../navbar
+
+block navbar
+	#Menu.container.text-center
+		h3 Géneros
+		.col-md-3
+			p.text-center
+				strong Rock
+			a(href='listaCanciones.php?info=1')
+				img.img-responsive(src='Images/Rock.png', alt='Random Name')
+		.col-md-3
+			p.text-center
+				strong Pop
+			a(href='listaCanciones.php?info=2')
+				img.img-responsive(src='Images/Pop.png', alt='Random Name')
+		.col-md-3
+			p.text-center
+				strong Rancheras
+			a(href='listaCanciones.php?info=3')
+				img.img-responsive(src='Images/Rancheras.png', alt='Random Name')
+		.col-md-3
+			p.text-center
+				strong Clasicas
+			a(href='listaCanciones.php?info=4')
+				img.img-responsive(src='Images/Oldies.png', alt='Random Name')

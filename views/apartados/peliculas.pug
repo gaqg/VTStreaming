@@ -1,0 +1,40 @@
+extends ../navbar
+
+block navbar
+	#Menu.container.text-center
+		h3 Géneros
+		.col-md-4
+			p.text-center
+				strong Estrenos
+			a(href='listaPelis.php?info=7')
+				img.img-responsive(src='Images/Estrenos.png', btn='', name='Estrenos', value="<?php  echo  $_SESSION['genero'] = $Estrenos; ?>", alt='Random Name')
+		.col-md-4
+			p.text-center
+				strong Accion
+			a(href='listaPelis.php?info=1')
+				img.img-responsive(src='Images/accion.png', value="<?php echo $_SESSION['genero'] = $Accion; ?>", name='Accion', alt='Random Name')
+		.col-md-4
+			p.text-center
+				strong Drama
+			a(href='listaPelis.php?info=6')
+				img.img-responsive(src='Images/Drama.png', name='Drama', value="<?php echo $_SESSION['genero'] = $Drama; ?>", alt='Random Name')
+		.col-md-3
+			p.text-center
+				strong Familiar
+			a(href='listaPelis.php?info=3')
+				img.img-responsive(src='Images/Familiar.png', name='Familiar', value="<?php echo $_SESSION['genero'] = $Familiar; ?>", alt='Random Name')
+		.col-md-3
+			p.text-center
+				strong Comedia
+			a(href='listaPelis.php?info=2')
+				img.img-responsive(src='Images/Comedia.png', name='Comedia', value="<?php echo $_SESSION['genero'] = $Comedia; ?>", alt='Random Name')
+		.col-md-3
+			p.text-center
+				strong Romanticas
+			a(href='listaPelis.php?info=4')
+				img.img-responsive(src='Images/Romanticas.png', value="<?php echo $_SESSION['genero'] = $Romantica; ?>", name='Romantica', alt='Random Name')
+		.col-md-3
+			p.text-center
+				strong Infantil
+			a(href='listaPelis.php?info=5')
+				img.img-responsive(src='Images/infantiles.png', name='infantil', value="<?php echo $_SESSION['genero'] = $Infantil; ?>", alt='Random Name')
