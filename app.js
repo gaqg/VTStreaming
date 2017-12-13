@@ -5,28 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+var index = require('./app/routes/index');
+var peliculas = require('./app/routes/peliculas');
+var musica = require('./app/routes/musica');
+var documentales = require('./app/routes/documentales');
+var api = require('./app/routes/api');
 
 var app = express();
 
-//database connection
-var mysql = require('mysql')
-
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'video2015',
-  database: 'bddbus'
-})
-
-connection.connect(function(err) {
-  if (err) {
-  	console.log('unable to connect to the database :(')
-  	throw err
-  }
-  console.log('You are now connected to the database ;)')
-})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,9 +26,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/peliculas', peliculas);
+app.use('/musica', musica);
+app.use('/documentales', documentales);
+
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

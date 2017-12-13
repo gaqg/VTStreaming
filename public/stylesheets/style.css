@@ -122,8 +122,14 @@ body {
   .dropdown-menu li a:hover {
       background-color: #4a004a !important;
   }
+
+   .portadas {
+    width: 400px;
+    height: 520px;
+
+  }
   footer {
-      position: absolute;
+      position: relative;
       right: 0;
       bottom: 0;
       left: 0;
